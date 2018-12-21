@@ -1,0 +1,23 @@
+module GarageCorba {
+
+ 
+struct Voiture
+	{
+		string src_garage;
+		string name;
+	};
+	
+	
+	typedef sequence<Voiture> tabVoitures;
+
+interface IGarageRemote
+{
+
+	void Restituer(in Voiture v);
+	void Louer(in Voiture v);
+	tabVoitures afficheVoitures();
+	Voiture maVoiture(in string name);
+};
+
+
+};
